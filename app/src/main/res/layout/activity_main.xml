@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <com.wm.easydialog.view.RoundButton
+        android:id="@+id/dialog_msg"
+        style="@style/button_style"
+        android:text="@string/dialog_msg"
+        app:rb_backgroundColor="@color/colorAccent"
+        />
+    <com.wm.easydialog.view.RoundButton
+        android:id="@+id/dialog_load"
+        style="@style/button_style"
+        android:text="@string/dialog_load"
+        app:rb_backgroundColor="@color/colorAccent"
+        />
+    <com.wm.easydialog.view.RoundButton
+        android:id="@+id/dialog_center_list"
+        style="@style/button_style"
+        android:text="@string/dialog_list"
+        app:rb_backgroundColor="@color/colorAccent"
+        />
+    <com.wm.easydialog.view.RoundButton
+        android:id="@+id/dialog_select_center_list"
+        style="@style/button_style"
+        android:text="@string/dialog_select_list"
+        app:rb_backgroundColor="@color/colorAccent"
+        />
+    <com.wm.easydialog.view.RoundButton
+        android:id="@+id/dialog_bottom_list"
+        style="@style/button_style"
+        android:text="@string/dialog_bottom_list"
+        app:rb_backgroundColor="@color/colorAccent"
+        />
+    <com.wm.easydialog.view.RoundButton
+        android:id="@+id/dialog_select_bottom_list"
+        style="@style/button_style"
+        android:text="@string/dialog_select_bottom_list"
+        app:rb_backgroundColor="@color/colorAccent"
+        />
+    <com.wm.easydialog.view.RoundButton
+        android:id="@+id/dialog_privacy"
+        style="@style/button_style"
+        android:text="@string/dialog_privacy"
+        app:rb_backgroundColor="@color/colorAccent"
+        />
+
+</LinearLayout>

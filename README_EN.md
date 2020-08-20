@@ -1,24 +1,24 @@
 # EasyDialog
 一款简单带动画的Dialog(Kotlin)
 
-### 中文 | [English](https://github.com/Android-wangmeng/EasyDialog/blob/master/README_EN.md)
+### English | [中文](https://github.com/Android-wangmeng/EasyDialog/blob/master/README.md)
 
 ### 演示
-|信息弹窗|加载弹窗|
+|Information Dialog|Loading Dialog|
 |:---:|:---:|
 |![](screenshots/dialog_msg.gif)|![](screenshots/dialog_loading.gif)|
 
-|中间列表弹窗|中间选择列表弹窗|
+|Center List Dialog|Center Select List Dialog|
 |:---:|:---:|
 |![](screenshots/dialog_center_list.gif)|![](screenshots/dialog_center_select_list.gif)|
 
-|底部列表弹窗|底部选择列表弹窗|
+|Bottom List Dialog|Bottom Select List Dialog |
 |:---:|:---:|
 |![](screenshots/dialog_bottom_list.gif)|![](screenshots/dialog_bottom_select_list.gif)|
 
-|隐私政策弹窗|
+|Privacy policy Dialog|
 |:---:|
-|![](screenshots/dialog_bottom_list.gif)|
+|![](screenshots/dialog_privacy.gif)|
 
 ### 添加如下配置将EasyDialog引入到你的项目当中：
 ```groovv
@@ -27,14 +27,14 @@ dependencies {
 }
 ```
 
-### API说明(EasyDialog)
+### API Description(EasyDialog)
 ```kotlin
     /**
-     * 构建设置
-     * @param animationTypeIn 进入动画(默认AnimationType.ZoomIn)
-     * @param animationTypeOut 退出动画(默认AnimationType.ZoomOut)
-     * @param dismissOnBack 点击返回建是否关闭Dialog(默认可以关闭)
-     * @param dismissOnTouch 触摸空白区域是否关闭Dialog(默认可以关闭)
+     * Build settings
+     * @param animationTypeIn enter animation (default AnimationType.ZoomIn)
+     * @param animationTypeOut exit animation (default AnimationType.ZoomOut)
+     * @param dismissOnBack Click to return to build whether to close the Dialog (can be closed by default)
+     * @param dismissOnTouch Whether to close the Dialog by touching the blank area (it can be closed by default)
      */
     fun build(
         animationTypeIn: AnimationType = AnimationType.ZoomIn,
@@ -44,13 +44,13 @@ dependencies {
     )
 
     /**
-     * 显示取消、确定Dialog
-     * @param title 标题
-     * @param msg 内容
-     * @param cancelText 左边按扭文字
-     * @param confirmText 右边按扭文字
-     * @param onConfirm 点击确定回调
-     */
+     * Show Cancel, Confirm Dialog
+     * @param title title
+     * @param msg content
+     * @param cancelText left button text
+     * @param confirmText right button text
+     * @param onConfirm Click to confirm callback
+      */
     fun showMessageDialog(
         title: String,
         msg: String,
@@ -60,13 +60,13 @@ dependencies {
     )
 
     /**
-     * 显示中间列表Dialog
-     * @param title 标题
-     * @param list 显示的列表集合
-     * @param iconIds 显示的图标集合
-     * @param checkedPosition 选中的位置，传-1为不选中
-     * @param primaryColor 文字主题颜色
-     * @param onItem 列表点击回调
+     * Show the middle list Dialog
+     * @param title title
+     * @param list display list collection
+     * @param iconIds display icon collection
+     * @param checkedPosition selected position, pass -1 to uncheck
+     * @param primaryColor text theme color
+     * @param onItem list click callback
      */
     fun showCenterListDialog(
         title: String,
@@ -78,13 +78,13 @@ dependencies {
     )
 
     /**
-     * 显示底部列表Dialog
-     * @param title 标题
-     * @param list 显示的列表集合
-     * @param iconIds 显示的图标集合
-     * @param checkedPosition 选中的位置，传-1为不选中
-     * @param primaryColor 文字主题颜色
-     * @param onItem 列表点击回调
+     * Show the bottom list Dialog
+     * @param title title
+     * @param list display list collection
+     * @param iconIds display icon collection
+     * @param checkedPosition selected position, pass -1 to uncheck
+     * @param primaryColor text theme color
+     * @param onItem list click callback
      */
     fun showBottomListDialog(
         title: String,
@@ -96,10 +96,10 @@ dependencies {
     )
 
     /**
-     * 加载Dialog
-     * @param msg 显示的内容
-     * @param indicator 指示器样式
-     * @param indicatorColor 指示器颜色
+     * Load Dialog
+     * @param msg content displayed
+     * @param indicator indicator style
+     * @param indicatorColor indicator color
      */
     fun showLoadDialog(
         msg: String,
@@ -108,15 +108,15 @@ dependencies {
     )
 
     /**
-     * 隐私政策dialog
-     * @param title 标题
-     * @param msg 显示的内容
-     * @param agreement 用户协议高亮显示
-     * @param privacy 隐私政策高亮显示
-     * @param onConfirm 确定回调
-     * @param onCancel 取消回调
-     * @param onAgreement 服务协议点击回调
-     * @param onPrivacy 隐私政策点击回调
+     * Privacy policy dialog
+     * @param title title
+     * @param msg content displayed
+     * @param agreement user agreement is highlighted
+     * @param privacy privacy policy highlighted
+     * @param onConfirm confirm callback
+     * @param onCancel cancel callback
+     * @param onAgreement service agreement click callback
+     * @param onPrivacy privacy policy click callback
      */
     fun showPrivacyPolicy(
         title: String,
@@ -132,34 +132,34 @@ dependencies {
     )
 
     /**
-     * 关闭Dialog
+     * Close Dialog
      */
     fun dismissDialog() {
         dialog?.dismiss()
     }
 
     /**
-     * 关闭动画之后进行逻辑操作(防止抖动)
+     * Perform logical operations after closing the animation (to prevent jitter)
      */
     fun dismissWithDialog(dismiss: () -> Unit) {
         dialog?.dismissWith { dismiss() }
     }
 ```
 
-### 使用方法
+### Instructions
 ```kotlin
-    //信息 Dialog
+    //Information Dialog
     EasyDialog.build().showMessageDialog()
-    //加载 Dialog
+    //Loading Dialog
     EasyDialog.build().showLoadDialog()
-    //中间弹出列表 Dialog
+    //Center List Dialog
     EasyDialog.build().showCenterListDialog()
-    //底部弹出列表 Dialog
+    //Bottom List Dialog
     EasyDialog.build().showBottomListDialog()
-    //隐私政策 Dialog
+    //Privacy policy Dialog
     EasyDialog.build().showPrivacyPolicy()
 ```
-### 加载框指示器样式(IndicatorType)
+### Loading box indicator style(IndicatorType)
 |Loading|
 |:---:|
 |![](screenshots/avi.gif)|
@@ -210,7 +210,7 @@ As seen above in the **Demo**, the indicators are as follows:
  * `BallGridBeatIndicator`
  * `SemiCircleSpinIndicator`
 
-### Dialog 动画(AnimationType)
+### Dialog Animation(AnimationType)
 #### Attension
 `Pulse`, `RubberBand`, `Shake`, `Swing`, `Wobble`, `Bounce`, `Tada`, `StandUp`, `Wave`
 

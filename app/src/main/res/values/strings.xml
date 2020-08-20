@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">EasyDialog</string>
+    <string name="dialog_msg">Msg Dialog</string>
+    <string name="dialog_load">Load Dialog</string>
+    <string name="dialog_list">Center List Dialog</string>
+    <string name="dialog_select_list">Center Select List Dialog</string>
+    <string name="dialog_bottom_list">Bottom List Dialog</string>
+    <string name="dialog_select_bottom_list">Bottom Select List Dialog</string>
+    <string name="dialog_privacy">Privacy policy Dialog</string>
+
+    <string name="dialog_warm_prompt">Warm reminder</string>
+    <string name="dialog_quit">Are you sure you want to quit?</string>
+    <string name="dialog_cancel">cancel</string>
+    <string name="dialog_confirm">confirm</string>
+    <string name="dialog_select">please select</string>
+    <string name="dialog_loading_style">Please select Loading style</string>
+    <string name="dialog_listing">list</string>
+    <string name="dialog_loading">is loading...</string>
+    <string name="dialog_privacy_title">service agreement and privacy policy</string>
+    <string name="dialog_privacy_msg">"   Please read carefully and fully understand the terms of the 《User Agreement》 and 《Privacy Policy》, including but not limited to: In order to provide you with network services, content distribution and other services, we need to collect you Personal information such as device information, operation logs, etc. You can view, change, delete personal information and manage your authorization in "Settings".
+     You can read the "User Agreement" and "Privacy Policy" for details. If you agree. Please click "Agree" to start our service. "</string>
+    <string name="dialog_agree">agree</string>
+    <string name="dialog_nonuse">temporarily not used</string>
+    <string name="use_terms">《User Agreement》</string>
+    <string name="use_privacy">《Privacy Policy》</string>
+</resources>
