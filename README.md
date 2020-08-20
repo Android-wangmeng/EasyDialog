@@ -18,7 +18,7 @@
 
 |隐私政策弹窗|
 |:---:|
-|![](screenshots/dialog_bottom_list.gif)|
+|![](screenshots/dialog_privacy.gif)|
 
 ### 添加如下配置将EasyDialog引入到你的项目当中：
 ```groovv
